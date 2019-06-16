@@ -72,20 +72,19 @@ URI     : https://colorlib.com
     <div class="client-logos my-5">
         
         <div class="space-60"></div>
-        <div class="subscribe-form text-center">
+        <div class="text-center">
             <h3 class="blue-color">Subscribe for More Features</h3>
             <div class="space-20"></div>
-            <form id="mc-form">
                 <div class="row">
                     <div class="col-sm-4"></div>
                     <div class="col-sm-4">            
-                        <input type="email" class="control" placeholder="Enter your email" required="required" id="mc-email" widht="100">    
-                        <button class="btn btn-primary btn-lg btn-block" type="submit"><span class="lnr lnr-location"></span> Subscribe</button>
+                        <input id="mail-input" type="email" class="control" placeholder="Enter your email" required="required"  widht="100">    
+                        <button id="mail-send" class="btn btn-primary btn-lg btn-block"><span class="lnr lnr-location"></span> Subscribe</button>
                     </div>
                     <div class="col-sm-4"></div>
                 </div>
                 <label class="mt10" for="mc-email"></label>
-            </form>
+          
         </div>
     </div>
 
@@ -489,6 +488,46 @@ URI     : https://colorlib.com
         </small>
     </footer>
 
+    <!--Model Popup starts-->
+
+        <div class="modal fade" id="ignismyModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label=""><span>×</span></button>
+                     </div>
+					
+                    <div class="modal-body">
+                       
+						<div class="thank-you-pop">
+							<img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
+							<h1>Gracias!</h1>
+							<p>Cuando tengamos novedades seras de los primeros en enterarse</p>
+ 						</div>                  
+                    </div>	
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="error" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label=""><span>×</span></button>
+                     </div>
+					
+                    <div class="modal-body">
+                       
+						<div class="thank-you-pop">
+							<img src="https://www.freeiconspng.com/uploads/error-icon-32.png" alt="">
+							<h1>Por Favor</h1>
+							<p>Ingresa un correo valido</p>
+ 						</div>                  
+                    </div>	
+                </div>
+            </div>
+        </div>
+<!--Model Popup ends-->
+
     <!-- jQuery and Bootstrap -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -496,7 +535,8 @@ URI     : https://colorlib.com
     <script src="js/owl.carousel.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
-
+    <!-- Mail Service -->
+    <script src=""></script>
 </body>
 
 </html>

@@ -110,3 +110,43 @@ $(function() {
     }
 
 }); /* End Fn */
+
+$(function(){
+    $("#mail-send").click(enviarMail);
+
+    function enviarMail(){
+        debugger
+        var mail = $("#mail-input").val();
+        if(validar(mail)){
+            $.ajax({
+                type: "POST",
+                url: "https://young-shelf-77369.herokuapp.com/mail",
+                data: {
+                    "email" : mail
+                },
+                contentType: "text/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg, status, jqXHR){
+                    
+                    $("#ignismyModal").modal('show');
+                    
+                }
+            });
+            
+        }else{
+            $("#error").modal('show');
+        }
+    }
+
+
+    function validar(email){
+        var emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+
+        if(email === "" || email === null){
+            return false;
+        }else{
+             return emailRegex.test(email);
+        }
+        
+    }
+});
